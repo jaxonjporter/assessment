@@ -48,7 +48,7 @@ class Planet extends React.Component {
       </div>
     </Segment>
 
-    <Button as={Link} to='/' color='blue'>Back</Button>
+    <Button as={Link} to='/people' color='blue'>Back</Button>
     </>
     )
   }

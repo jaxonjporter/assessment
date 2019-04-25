@@ -4,6 +4,8 @@ import People from './People'
 import Planet from './Planet'
 import {Container, } from 'semantic-ui-react';
 import Navbar from './Navbar'
+import Home from './Home'
+import NoMatch from './NoMatch';
 
 const App = () => {
 
@@ -12,8 +14,11 @@ const App = () => {
     <Navbar />
     <Container>
     <Switch>
-      <Route exact path='/' component={People} />
+
+      <Route exact path='/people' component={People} />
       <Route exact path='/planet/:name' render={(props) => <Planet name={props.match.params.name} /> } />
+      <Route exact path='/' component={Home} />
+      <Route component={NoMatch} />
     </Switch>
   </Container>
     </>

@@ -3,7 +3,7 @@ import { Link, } from 'react-router-dom'
 import { Menu } from 'semantic-ui-react'
 
 export default class MenuExampleTabular extends Component {
-  state = { activeItem: 'People' }
+  state = { activeItem: 'Home' }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
@@ -12,10 +12,8 @@ export default class MenuExampleTabular extends Component {
 
     return (
       <Menu>
-        {/* <Link to='/'> */}
           <Menu.Item name='Home' as={Link} to='/' active={activeItem === 'Home'} onClick={this.handleItemClick} />
-          <Menu.Item name='People' as={Link} to='/' active={activeItem === 'People'} onClick={this.handleItemClick} />
-        {/* </Link> */}
+          <Menu.Item name='People' as={Link} to='/people' active={activeItem === 'People'} onClick={this.handleItemClick} />
       </Menu>
     )
   }
